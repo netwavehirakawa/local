@@ -1,7 +1,20 @@
+/* swipper */
+$(function(){
+	var mySwiper = new Swiper ('.swiper-container', {
+		loop: true,
+		pagination: '.swiper-pagination',
+		nextButton: '.swiper-button-next',
+		prevButton: '.swiper-button-prev',
+		autoplay: 1000,
+	})
+
+});
+
+
 
 /* スムーススクロール */
 $(function(){
-	$('a[href^="#"]').click(function(){
+	$('.ftr_gotop_link').click(function(){
 		var speed = 500;
 		var href= $(this).attr("href");
 		var target = $(href == "#" || href == "" ? 'html' : href);
@@ -12,27 +25,18 @@ $(function(){
 });
 
 
-/* フランチャイズ　もっと見るボタン */
+
 $(function(){
-	var $morebtn = $('#seminar_more_btn'),
-		$seminar_more = $('.hide-text');
 
-		$seminar_more.hide();
-		$morebtn.each(function() {
-			var flag = "close";
-			$(this).click(function(e) {
-				$('.hide-text').slideToggle(700);
 
-				if(flag == "close"){
-					$(this).text("閉じる").addClass('close_btn').removeClass('more_btn');
-					flag = "open";
-				}
-				else{
-					$(this).text("もっと見る").addClass('more_btn').removeClass('close_btn');
-					flag = "close";
-				}
+		$('#gnav').slicknav({
+			label: 'メニュー',
+			 appendTo:'.hdr_wrap',
 
-			});
 		});
+		$('.slicknav_menutxt').insertAfter('.slicknav_icon');
 
-});
+		$(".slicknav_btn").click(function(){
+			$(this).toggleClass("active");
+		});
+	});
