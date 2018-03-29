@@ -15,7 +15,8 @@
 <link rel="stylesheet" href="css/swiper.min.css">
 <script src="js/jquery-1.12.4.min.js"></script>
 <script src="js/common.js"></script>
-<script src="js/swiper.min.js"></script>
+<!--<script src="js/swiper.min.js"></script>-->
+<script src="js/jquery.bgswitcher.js"></script>
 <script src="js/jquery.slicknav.min.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
@@ -53,34 +54,14 @@
 	<!-- /header -->
 
 	<div class="main_visual">
-		<div class="swiper-container">
-			<div class="swiper-wrapper">
-				<!-- Slides -->
-				<div class="swiper-slide" style="
-					background-image: url('https://manablog.org/wp-content/uploads/2017/07/top.jpg');
-					background-repeat: no-repeat;
-					width: 1261px;
-					height: 500px;
-					background-size: cover;
-					background-position: center center;">
-					Swiper is the best slider ever :)
-				</div>
-				<div class="swiper-slide" style="
-					background-image: url('https://manablog.org/wp-content/uploads/2017/07/top.jpg');
-					background-repeat: no-repeat;
-					width: 1261px;
-					height: 500px;
-					background-size: cover;
-					background-position: center center;">
-					Swiper is the best slider ever :)
-				</div>
-			</div>
-			<div class="swiper-pagination"></div>
-
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>
+		<div class="bg-slider">
+			<div class="bg-slider__title">テキストの追加</div>
 		</div>
-			<div class="cont_link_area pc_block">
+	</div>
+	<!-- /main_visual -->
+
+
+	<div class="cont_link_area pc_block">
 		<div class="cont_link_inr">
 			<ul class="cont_link_list">
 				<li class="cont_link_item"><a href="#"><img src="images/link_img01.png" alt="システム開発・運用"><span>システム開発・運用</span></a></li>
@@ -90,9 +71,7 @@
 			</ul>
 		</div>
 	</div>
-	</div>
-	<!-- /main_visual -->
-
+	<!-- /cont_link_area -->
 
 	<div class="cont_link_area sp_block">
 		<div class="cont_link_inr">
@@ -103,10 +82,8 @@
 				<li class="cont_link_item"><a href="#"><img src="images/sp/link_img04.jpg" alt="RPAソリューション"><span>RPAソリューション</span></a></li>
 			</ul>
 		</div>
-
 	</div>
 	<!-- /cont_link_area -->
-
 
 
 	<div id="contents">
@@ -124,7 +101,6 @@
 								</dl>
 							</a>
 						</li>
-
 						<li class="cont_news_item">
 							<a href="#" class="cont_news_item-pdf">
 								<dl>
@@ -381,10 +357,6 @@
 		</div>
 	</footer>
 	<!-- /footer -->
-
-
-
-
 
 </div>
 <!-- /container -->
