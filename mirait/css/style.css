@@ -11,6 +11,9 @@
 }
 
 
+.container {
+	background: #fff;
+}
 
 /* **************************
   header
@@ -23,15 +26,12 @@
 	z-index: 100;
 }
 .hdr_inr {
-	width: 1000px;
+	max-width: 1000px;
 	margin: 0 auto;
 }
 .hdr_logo {
 	width: 185px;
 	float: left;
-}
-.hdr_logo:hover {
-	opacity: 0.9;
 }
 .hdr_gnav_list {
 	display: flex;
@@ -64,7 +64,8 @@
 .slicknav_menu {
 	display:none;
 }
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {*/
+@media screen and (max-width: 1000px) {
 	#gnav {
 		display:none;
 	}
@@ -116,18 +117,18 @@
   main_visual
 ************************** */
 .main_visual > div {
-	top: 100px !important;
+/*	top: 100px !important;
 	padding-top: calc( 720/1920*80% ) !important;
 	width: 100% !important;
 	height: 0 !important;
 	margin-top: -40px !important;
-	background-size: contain !important;
+	background-size: contain !important;*/
 }
 .main_visual .bg-slider {
 	width: 100vw;
 	height: 450px;
 	background-position:center center;
-	background-size: cover;
+	/*background-size: cover;*/
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -147,7 +148,7 @@
   sナビエリア
 ************************** */
 .cont_link_area {
-	width: 1000px;
+	max-width: 1000px;
 	margin: 10px auto 0;
 	padding: 0 10px;
 	box-sizing: border-box;
@@ -172,7 +173,7 @@
 }
 .cont_link_item span {
 	display: block;
-	font-size: 16px;
+	font-size: 13px;
 	font-weight: bold;
 }
 
@@ -230,16 +231,21 @@
   ニュースエリア
 ************************** */
 .cont_news_area {
-	width: 1000px;
+	max-width: 1000px;
 	margin: 0 auto;
 	padding-top: 60px;
 }
 .cont_news_area li {
 	border-top: 1px dotted #000;
-	padding: 20px;
 }
 .cont_news_area li:last-child {
 	border-bottom: 1px dotted #000;
+}
+.cont_news_item-nolink {
+	padding: 17px 0 17px 25px;
+}
+.cont_news_area .cont_news_item a {
+	padding: 20px 0 20px 23px;
 }
 .cont_news_area dt span {
 	display: inline-block;
@@ -315,6 +321,8 @@
 }
 .cont_news_area dd:last-child {
 	width: 72%;
+	padding-right: 40px;
+	box-sizing: border-box;
 }
 
 
@@ -323,7 +331,7 @@
   トレンドエリア
 ************************** */
 .cont_trend_area {
-	width: 1000px;
+	max-width: 1000px;
 	margin: 60px auto 0;
 }
 .cont_trend_list {
@@ -344,7 +352,7 @@
   ケースエリア
 ************************** */
 .cont_case_area {
-	margin-top: 60px;
+	margin-top: 50px;
 	padding-top: 46px;
 	padding-bottom: 46px;
 	background: url(../images/trend_bg.png) no-repeat;
@@ -366,6 +374,7 @@
 }
 .cont_case_img {
 	position: relative;
+	height: 180px;
 }
 .cont_case_img:before {
 	position: absolute;
@@ -396,11 +405,8 @@
 	width: 100%;
 	height: auto;
 }
-.cont_case_item:nth-child(3) .cont_case_txt_top {
-	padding-bottom: 60px;
-}
 .cont_case_txt_top {
-	padding: 30px;
+	padding: 20px 25px 30px;
 	text-align: center;
 }
 .cont_case_txt_top p {
@@ -408,21 +414,28 @@
 	display: inline-block;
 	border-bottom: 1px dotted #000;
 }
+.cont_case_txt_top span {
+	font-size: 17px;
+}
 .cont_case_txt_link {
 	text-align: center;
 	padding-bottom: 35px;
 }
+/*
 .cont_case_txt_link p {
 	color: #08238e;
 	font-size: 11px;
 	padding-bottom: 5px;
-}
+}*/
 .cont_case_txt_link li {
 	margin-bottom: 10px;
 	padding: 0 15px;
 }
 .cont_case_txt_link li:last-child {
 	margin-bottom: 0;
+}
+.cont_case_txt_link li a:hover {
+	opacity: 0.7;
 }
 .cont_case_txt_link img {
 	width: 100%;
@@ -433,10 +446,16 @@
 	width: 100%;
 	font-size: 11px;
 	display: block;
-	padding: 10px 0;
+	padding: 5px 0;
 	margin: 0 auto;
 	border: 1px solid #c1c1c1;
 	box-sizing: border-box;
+}
+
+.cont_case_txt_link_other a:after {
+	content: ">";
+	font-size: 12px;
+	margin-left: 5px;
 }
 
 
@@ -444,9 +463,6 @@
 /* **************************
   footer
 ************************** */
-.ftr_wrap {
-	padding-bottom: 20px;
-}
 .ftr_wrap a:hover {
 	color: #fff;
 }
@@ -479,21 +495,23 @@
 .ftr_nav_item:last-child {
 	margin-right: 0;
 }
-.ftr_nav_item dt {
-	color: #fff;
-	font-size: 17px;
+.ftr_nav_item dt,
+.ftr_nav_item dt a {
+	color: #ddd;
+	font-size: 15px;
 	font-weight: bold;
 	margin-bottom: 10px;
 }
 .ftr_nav_item dd {
+	line-height: 1.4;
 	border-bottom: 1px dashed #616266;
 	padding: 5px 0;
 }
-.ftr_nav_item a {
+.ftr_nav_item dd a {
 	color: #ddd;
-	font-size: 15px;
+	font-size: 13px;
 }
-.ftr_nav_item a:before {
+.ftr_nav_item dd a:before {
 	content: "";
 	display: inline-block;
 	width: 4px;
@@ -518,14 +536,15 @@
 	display:-webkit-box;
 	display:-ms-flexbox;
 	display: -webkit-flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 .ftr_links a {
-	font-size: 13px;
+	font-size: 12px;
 	color: #ddd;
 }
 .ftr_copy {
-	background: #fff;
+	background: #fbfbfb;
+	padding-bottom: 20px;
 }
 .ftr_copy_block {
 	display: flex;
@@ -538,14 +557,15 @@
 	justify-content: space-around;
 }
 .ftr_copy_block dt {
+	font-size: 15px;
 	font-weight: bold;
 }
 .ftr_copy_block dd {
-	font-size: 18px;
+	font-size: 15px;
 }
 .ftr_copy_block dd span {
 	display: block;
-	font-size: 15px;
+	font-size: 14px;
 }
 .ftr_copy_privacy ul {
 	display: flex;
@@ -556,11 +576,13 @@
 .ftr_nav_inr,
 .ftr_links_inr,
 .ftr_copy_inr {
-	width: 1000px;
+	max-width: 1000px;
 	margin: 0 auto;
+	padding: 0 10px;
+	box-sizing: border-box;
 }
 .ftr_copy_inr p {
-	padding-top: 40px;
+	padding-top: 20px;
 	font-size: 12px;
 	text-align: center;
 }
@@ -733,7 +755,8 @@
 	.cont_news_area li:last-child {
 		border-bottom: 1px dotted #000;
 	}
-	.cont_news_list {
+	.cont_news_area .cont_news_item a {
+		padding: 0;
 	}
 	.cont_news_area dt span {
 		display: inline-block;
@@ -819,6 +842,7 @@
 		margin-bottom: 20px;
 	}
 	.cont_case_img {
+		height: inherit;
 		position: relative;
 	}
 	.cont_case_txt {
@@ -857,15 +881,16 @@
 	.cont_case_txt_link_other a {
 		font-size: 16px;
 	}
+	.cont_case_txt_link_other a:after {
+		font-size: 16px;
+		margin-left: 10px;
+	}
 
 
 
 	/* **************************
 	  footer
 	************************** */
-	.ftr_wrap {
-		padding-bottom: 20px;
-	}
 	/* footerグローバル*/
 	.ftr_nav_inr {
 		position: relative;
@@ -901,6 +926,7 @@
 	/* footerメニュー*/
 	.ftr_links ul {
 		justify-content: center;
+		padding: 10px 0;
 	}
 	.ftr_links ul:nth-child(1) li,
 	.ftr_links ul:nth-child(3) li{
@@ -908,6 +934,9 @@
 	}
 	.ftr_links a {
 		font-size: 10px;
+	}
+	.ftr_copy {
+		padding-bottom: 20px;
 	}
 	.ftr_copy_logo {
 		text-align: center;
