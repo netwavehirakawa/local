@@ -70,6 +70,8 @@
 	line-height: 60px;
 	height: 60px;
 	box-sizing: border-box;
+	position: relative;
+	z-index: 100;
 }
 .hdr_inr {
 	width: 1000px;
@@ -107,18 +109,29 @@
   main_visual
 ************************** */
 .main_visual {
+	height: 550px;
+	position: relative;
+	margin-top: -100px;
 }
-
-/* スライダー用 */
-.swiper-container {
-	width: 100%;
+.main_visual > div {
+	top: 100px !important;
+}
+.main_visual .bg-slider {
+	width: 100vw;
 	height: 450px;
+	background-position:center center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-.swiper-slide {
-	padding-top: 180px;
-	text-align: center;
+.main_visual .bg-slider__title{
 	color: #fff;
-	font-size: 30px;
+	font-size: 48px;
+	line-height: 1.5;
+	font-weight: bold;
+	text-align:center;
+	text-shadow: 1px 1px 1px #000;
 }
 
 
