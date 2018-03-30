@@ -4,28 +4,75 @@
   共通
 ************************** */
 .pc_block {
-	display: block;
+	display: block !important;
 }
 .sp_block {
-	display: none;
+	display: none !important;
 }
 
 
 
+/* **************************
+  header
+************************** */
+.hdr_wrap {
+	line-height: 60px;
+	height: 60px;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 100;
+}
+.hdr_inr {
+	width: 1000px;
+	margin: 0 auto;
+}
+.hdr_logo {
+	width: 185px;
+	float: left;
+}
+.hdr_logo:hover {
+	opacity: 0.9;
+}
+.hdr_gnav_list {
+	display: flex;
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display: -webkit-flex;
+	justify-content: space-between;
+}
+.hdr_gnav_list a {
+	font-size: 13px;
+}
+.hdr_gnav_item:first-child {
+	margin-left: 50px;
+}
+.hdr_gnav_item:last-child {
+	margin-left: 40px;
+}
+.lang_switch {
+	border: 1px solid #aaaa;
+	padding: 7px 24px;
+}
 
+
+
+/* **************************
+  ハンバーガーメニュー
+************************** */
+
+/*PC,SPでの表示を切り替え*/
 .slicknav_menu {
-	display:none;/*PC時は非表示*/
+	display:none;
 }
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 768px) {
 	#gnav {
-		display:none;/*モバイル時は非表示*/
+		display:none;
 	}
 	.slicknav_menu {
-		display:block;/*モバイル時は表示*/
+		display:block;
 	}
 }
 
-/*ハンバーガーメニューのエフェクト*/
 .slicknav_icon,
 .slicknav_icon span {
 	display: inline-block;
@@ -63,58 +110,18 @@
 }
 
 
-/* **************************
-  header
-************************** */
-.hdr_wrap {
-	line-height: 60px;
-	height: 60px;
-	box-sizing: border-box;
-	position: relative;
-	z-index: 100;
-}
-.hdr_inr {
-	width: 1000px;
-	margin: 0 auto;
-}
-.hdr_logo {
-	width: 185px;
-	float: left;
-}
-.hdr_gnav_list {
-	display: flex;
-	display:-webkit-box;
-	display:-ms-flexbox;
-	display: -webkit-flex;
-	justify-content: space-between;
-}
-.hdr_gnav_list a {
-	font-size: 13px;
-}
-.hdr_gnav_item:first-child {
-	margin-left: 50px;
-}
-.hdr_gnav_item:last-child {
-	margin-left: 40px;
-}
-.lang_switch {
-	border: 1px solid #aaaa;
-	padding: 7px 24px;
-}
-
-
 
 
 /* **************************
   main_visual
 ************************** */
-.main_visual {
-	height: 550px;
-	position: relative;
-	margin-top: -100px;
-}
 .main_visual > div {
 	top: 100px !important;
+	padding-top: calc( 720/1920*80% ) !important;
+	width: 100% !important;
+	height: 0 !important;
+	margin-top: -40px !important;
+	background-size: contain !important;
 }
 .main_visual .bg-slider {
 	width: 100vw;
@@ -136,13 +143,12 @@
 
 
 
-
 /* **************************
   sナビエリア
 ************************** */
 .cont_link_area {
-	width: 750px;
-	margin: -20px auto 0;
+	width: 1000px;
+	margin: 10px auto 0;
 	padding: 0 10px;
 	box-sizing: border-box;
 	position: relative;
@@ -161,6 +167,9 @@
 .cont_link_item a {
 	display: block;
 }
+.cont_link_item a:hover {
+	opacity: 0.9;
+}
 .cont_link_item span {
 	display: block;
 	font-size: 16px;
@@ -172,8 +181,6 @@
 /* **************************
   contents
 ************************** */
-
-/* contents */
 #contents {
 	width: 100%;
 	background: #ccc;
@@ -181,7 +188,6 @@
 .cont_inr {
 	background: #fff;
 }
-
 
 /* h2 */
 .cont_ttl {
@@ -220,7 +226,6 @@
 
 
 
-
 /* **************************
   ニュースエリア
 ************************** */
@@ -235,9 +240,6 @@
 }
 .cont_news_area li:last-child {
 	border-bottom: 1px dotted #000;
-}
-
-.cont_news_list {
 }
 .cont_news_area dt span {
 	display: inline-block;
@@ -256,6 +258,7 @@
 	color: #fff;
 	background: #08238e;
 }
+
 /* イベント */
 .cont_news_item-event {
 	width: 130px;
@@ -265,7 +268,6 @@
 	color: #fff;
 	background: #ff8522;
 }
-
 .cont_news_item a {
 	display: block;
 	position: relative;
@@ -292,9 +294,6 @@
 	background: url(../images/news_icon01.png) no-repeat;
 	background-size: 40px 14px;
 }
-
-
-
 .cont_news_item-date {
 	color: #08238e;
 	font-size: 13px;
@@ -338,8 +337,6 @@
 	margin-right: 10px;
 
 }
-
-
 
 
 
@@ -444,7 +441,6 @@
 
 
 
-
 /* **************************
   footer
 ************************** */
@@ -464,7 +460,6 @@
 .ftr_nav_inr {
 	position: relative;
 }
-
 .ftr_nav_list {
 	display: flex;
 	display:-webkit-box;
@@ -473,6 +468,9 @@
 }
 .ftr_nav_list:last-child {
 	margin-top: 55px;
+}
+.ftr_nav_list.mtup {
+	margin-top: 50px;
 }
 .ftr_nav_item {
 	width: 220px;
@@ -509,15 +507,12 @@
 	padding-left: 20px;
 }
 
-
-
 /* footerメニュー*/
 .ftr_links {
 	font-size: 11px;
 	background: #000;
 	padding: 15px 0;
 }
-
 .ftr_links ul {
 	display: flex;
 	display:-webkit-box;
@@ -525,7 +520,6 @@
 	display: -webkit-flex;
 	justify-content: space-between;
 }
-
 .ftr_links a {
 	font-size: 13px;
 	color: #ddd;
@@ -593,12 +587,11 @@
 	  共通
 	************************** */
 	.sp_block {
-		display: block;
+		display: block !important;
 	}
 	.pc_block {
-		display: none;
+		display: none !important;
 	}
-
 	img {
 		max-width: 100%;
 		height: auto;
@@ -646,10 +639,6 @@
 
 
 
-
-
-
-
 	/* **************************
 	  contents
 	************************** */
@@ -666,6 +655,32 @@
 	.cont_ttl span {
 		font-size: 16px;
 	}
+
+
+
+	/* **************************
+	  main_visual
+	************************** */
+	.main_visual {
+		position: relative;
+	}
+	.main_visual > div {
+		top: 0 !important;
+		padding-top: calc( 450/750*100% ) !important;
+		width: 100% !important;
+		height: 0 !important;
+		margin-top: 0 !important;
+		background-size: contain !important;
+	}
+	.main_visual .bg-slider__title{
+		color: #fff;
+		font-size: 48px;
+		line-height: 1.5;
+		font-weight: bold;
+		text-align:center;
+		text-shadow: 1px 1px 1px #000;
+	}
+
 
 
 	/* **************************
@@ -735,6 +750,7 @@
 		color: #fff;
 		background: #08238e;
 	}
+
 	/* イベント */
 	.cont_news_item-event {
 		width: 125px;
@@ -761,7 +777,6 @@
 
 
 
-
 	/* **************************
 	  トレンドエリア
 	************************** */
@@ -781,8 +796,6 @@
 	.cont_trend_item:last-child {
 		margin-right: 0;
 	}
-
-
 
 
 
@@ -822,7 +835,6 @@
 		display: inline-block;
 		border-bottom: 1px dotted #000;
 	}
-
 	.cont_case_txt_link {
 		text-align: center;
 		padding-bottom: 20px;
@@ -848,8 +860,6 @@
 
 
 
-
-
 	/* **************************
 	  footer
 	************************** */
@@ -865,8 +875,8 @@
 	.ftr_nav_list {
 		display: block;
 	}
-	.ftr_nav_list:last-child {
-		margin-top: 55px;
+	.ftr_nav_list.mtup {
+		margin-top: 38px;
 	}
 	.ftr_nav_item {
 		width: 100%;
@@ -931,9 +941,6 @@
 		padding-top: 20px;
 		font-size: 10px;
 	}
-
-
-
 
 }
 

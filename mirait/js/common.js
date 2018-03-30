@@ -1,20 +1,33 @@
-/* swipper */
-/*$(function(){
-	var mySwiper = new Swiper ('.swiper-container', {
-		loop: true,
-		pagination: '.swiper-pagination',
-		nextButton: '.swiper-button-next',
-		prevButton: '.swiper-button-prev',
-		autoplay: 1000,
-	})
-});*/
+/* スライダー */
+$(function () {
+	var ua = navigator.userAgent;
+	if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
+		$('.bg-slider.sp_block').bgSwitcher({
+		images: ['images/sp/mv.jpg','images/sp/mv.jpg','images/case_img03.png'],
+	});
+		// スマートフォン用コード
+	} else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
+		// タブレット用コード
+	} else {
+		// PC用コード
+		$('.bg-slider.pc_block').bgSwitcher({
+		images: ['images/mv.jpg','images/mv.jpg','images/case_img03.png'],
+	});
+	}
+})
+
+
 
 
 
 $(function($) {
-    $('.bg-slider').bgSwitcher({
-        images: ['images/case_img01.png','images/case_img02.png','images/case_img03.png'], // 切り替える背景画像を指定
-    });
+	$('.bg-slider.pc_block').bgSwitcher({
+		images: ['images/mv.jpg','images/mv.jpg','images/case_img03.png'],
+	});
+	/*
+	$('.bg-slider.sp_block').bgSwitcher({
+		images: ['images/sp/mv.jpg','images/sp/mv.jpg','images/case_img03.png'],
+	});*/
 });
 
 
