@@ -768,8 +768,12 @@
 	.hdr_logo {
 		width: 15.4rem;
 		float: left;
-		padding-top: 10px;
-		padding-left: 10px;
+		padding-top: 11px;
+		padding-left: 13px;
+	}
+	.hdr_logo img {
+		width: 235px;
+		height: 35px;
 	}
 	.hdr_gnav_list {
 		display: flex;

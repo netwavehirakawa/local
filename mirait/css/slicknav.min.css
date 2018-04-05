@@ -76,7 +76,7 @@
 
 /* 開いている時 */
 .slicknav_btn.slicknav_collapsed .slicknav_icon span:nth-of-type(1) {
-  top: -6px;
+  top: -5px;
 }
 .slicknav_btn.slicknav_collapsed .slicknav_icon span:nth-of-type(2) {
   top: 1px;
@@ -134,7 +134,7 @@
 }
 
 .slicknav_btn {
-  margin: 10px 5px 6px;
+  margin: 7px 2px 3px;
 	/*margin: 5px 5px 6px;*/
   text-decoration: none;
   text-shadow: 0 1px 1px rgba(255, 255, 255, .75);
