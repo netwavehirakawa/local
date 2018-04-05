@@ -6,7 +6,7 @@
 
 <title>株式会社ミライト情報システム┃Just the thing！お客様から「まさにこれ！」と言われる自分、仲間、会社、そして仕事</title>
 <meta name="description" content="">
-<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width">
 
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/common.css">
@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="css/top.css">
 <link rel="stylesheet" href="css/slicknav.min.css">
 <link rel="stylesheet" href="css/swiper.min.css">
+<link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
 <script src="js/jquery-1.12.4.min.js"></script>
 <script src="js/common.js"></script>
 <script src="js/swiper.min.js"></script>
@@ -21,11 +22,13 @@
 <script src="js/jquery.slicknav.min.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <script src="js/top.js"></script>
-
-
-<!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
+<script>
+	var isSupportPicture = !!window.HTMLPictureElement;
+	if(!isSupportPicture){
+		document.createElement( "picture" );
+		document.write('<script src="js/picturefill.min.js" async><\/script>');
+	}
+</script>
 </head>
 
 <body id="top_page">
@@ -58,10 +61,34 @@
 		<figure class="main_visual_inr">
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide"><img src="images/mv01.jpg" alt=""></div>
-					<div class="swiper-slide"><img src="images/mv02.jpg" alt=""></div>
-					<div class="swiper-slide"><img src="images/mv03.jpg" alt=""></div>
-					<div class="swiper-slide"><img src="images/mv04.jpg" alt=""></div>
+					<div class="swiper-slide">
+						<picture>
+							<source media="(max-width: 767px)" srcset="images/mv01_sp_2x.jpg">
+							<source media="(min-width: 768px)" srcset="images/mv01.jpg">
+							<img src="images/mv01.jpg" alt="">
+						</picture>
+					</div>
+					<div class="swiper-slide">
+						<picture>
+							<source media="(max-width: 767px)" srcset="images/mv01_sp_2x.jpg">
+							<source media="(min-width: 768px)" srcset="images/mv02.jpg">
+							<img src="images/mv02.jpg" alt="">
+						</picture>
+					</div>
+					<div class="swiper-slide">
+						<picture>
+							<source media="(max-width: 767px)" srcset="images/mv01_sp_2x.jpg">
+							<source media="(min-width: 768px)" srcset="images/mv03.jpg">
+							<img src="images/mv03.jpg" alt="">
+						</picture>
+					</div>
+					<div class="swiper-slide">
+						<picture>
+							<source media="(max-width: 767px)" srcset="images/mv01_sp_2x.jpg">
+							<source media="(min-width: 768px)" srcset="images/mv04.jpg">
+							<img src="images/mv04.jpg" alt="">
+						</picture>
+					</div>
 				</div>
 				<div class="swiper-button-prev"></div>
 				<div class="swiper-button-next"></div>
@@ -74,10 +101,10 @@
 	<div class="cont_link_area pc_block">
 		<div class="cont_link_inr">
 			<ul class="cont_link_list">
-				<li class="cont_link_item"><a href="https://www.miraitsystems.jp/package/index.html"><img src="images/link_img01.png" alt="システム開発・運用"><span>システム開発・運用</span></a></li>
-				<li class="cont_link_item"><a href="https://www.miraitsystems.jp/cloud/index.html"><img src="images/link_img02.png" alt="クラウド構築・運用"><span>クラウド構築・運用</span></a></li>
-				<li class="cont_link_item"><a href="https://www.miraitsystems.jp/solution/index.html#smartdevice"><img src="images/link_img03.png" alt="スマートデバイスソリューション"><span>スマートデバイスソリューション</span></a></li>
-				<li class="cont_link_item"><a href="https://www.miraitsystems.jp/solution/index.html"><img src="images/link_img04.png" alt="RPAソリューション"><span>RPAソリューション</span></a></li>
+				<li class="cont_link_item"><a href="https://www.miraitsystems.jp/package/index.html"><i><img src="images/link_img01_2x.png" alt="システム開発・運用"></i><span>システム開発・運用</span></a></li>
+				<li class="cont_link_item"><a href="https://www.miraitsystems.jp/cloud/index.html"><i><img src="images/link_img02_2x.png" alt="クラウド構築・運用"></i><span>クラウド構築・運用</span></a></li>
+				<li class="cont_link_item"><a href="https://www.miraitsystems.jp/solution/index.html#smartdevice"><i><img src="images/link_img03_2x.png" alt="スマートデバイスソリューション"></i><span>スマートデバイスソリューション</span></a></li>
+				<li class="cont_link_item"><a href="https://www.miraitsystems.jp/solution/index.html"><i><img src="images/link_img04_2x.png" alt="RPAソリューション"></i><span>RPAソリューション</span></a></li>
 			</ul>
 		</div>
 	</div>
@@ -86,10 +113,10 @@
 	<div class="cont_link_area sp_block">
 		<div class="cont_link_inr">
 			<ul class="cont_link_list">
-				<li class="cont_link_item"><a href="https://www.miraitsystems.jp/package/index.html"><img src="images/sp/link_img01.jpg" alt="システム開発・運用"><span>システム開発・運用</span></a></li>
-				<li class="cont_link_item"><a href="https://www.miraitsystems.jp/cloud/index.html"><<img src="images/sp/link_img02.jpg" alt="クラウド構築・運用"><span>クラウド構築・運用</span></a></li>
-				<li class="cont_link_item"><a href="https://www.miraitsystems.jp/solution/index.html#smartdevice"><img src="images/sp/link_img03.jpg" alt="スマートデバイスソリューション"><span>スマートデバイス <br>ソリューション</span></a></li>
-				<li class="cont_link_item"><a href="https://www.miraitsystems.jp/solution/index.html"><img src="images/sp/link_img04.jpg" alt="RPAソリューション"><span>RPAソリューション</span></a></li>
+				<li class="cont_link_item"><a href="https://www.miraitsystems.jp/package/index.html"><i><img src="images/sp/link_img01.jpg" alt="システム開発・運用"></i><span>システム開発・運用</span></a></li>
+				<li class="cont_link_item"><a href="https://www.miraitsystems.jp/cloud/index.html"><i><img src="images/sp/link_img02.jpg" alt="クラウド構築・運用"></i><span>クラウド構築・運用</span></a></li>
+				<li class="cont_link_item"><a href="https://www.miraitsystems.jp/solution/index.html#smartdevice"><i><img src="images/sp/link_img03.jpg" alt="スマートデバイスソリューション"></i><span>スマートデバイス <br>ソリューション</span></a></li>
+				<li class="cont_link_item"><a href="https://www.miraitsystems.jp/solution/index.html"><i><img src="images/sp/link_img04.jpg" alt="RPAソリューション"></i><span>RPAソリューション</span></a></li>
 			</ul>
 		</div>
 	</div>
@@ -155,10 +182,10 @@
 				<div class="cont_trend_block">
 					<ul class="cont_trend_list">
 						<li class="cont_trend_item">
-							<a href="https://www.miraitsystems.jp/solution/winactor/index.html"><img src="images/trend_img01.png" alt="winactor"></a>
+							<a href="https://www.miraitsystems.jp/solution/winactor/index.html"><img src="images/trend_img01_2x.png" alt="winactor"></a>
 						</li>
 						<li class="cont_trend_item">
-							<a href="#"><img src="images/trend_img02.png" alt="社長メッセージ"></a>
+							<a href="#"><img src="images/trend_img02_2x.png" alt="社長メッセージ"></a>
 						</li>
 					</ul>
 				</div>
@@ -166,72 +193,106 @@
 			<!-- /cont_trend_area -->
 
 			<div class="cont_case_area">
-				<div class="cont_case_list">
-					<div class="cont_case_item">
-						<div class="cont_case_img cont_case-04"><a href="https://www.miraitsystems.jp/package/index.html"><img src="images/case_img04.png" alt="システム開発・運用"></a></div>
-						<div class="cont_case_txt">
-							<div class="cont_case_txt_top">
+				<div class="cont_case_list_wrap">
+					<div class="cont_case_list">
+						<div class="cont_case_item">
+							<div class="cont_case_img cont_case-04">
 								<a href="https://www.miraitsystems.jp/package/index.html">
-									<p>フレームワークや自動化ツールを</p>
-									<p>用いた業務システム開発<span>→</span></p>
+									<picture>
+										<source media="(max-width: 991px)" srcset="images/case_img04_sp_2x.jpg">
+										<source media="(min-width: 992px)" srcset="images/case_img04_2x.png">
+										<img src="images/case_img04_2x.png" alt="システム開発・運用">
+									</picture>
+									<span>システム開発・運用</span>
 								</a>
 							</div>
-							<div class="cont_case_txt_link">
-								<ul>
-									<li><a href="https://www.miraitsystems.jp/package/rakuraku_fw2/"><img src="images/case_list_img06.png" alt="winactor"></a></li>
-									<li><a href="https://www.miraitsystems.jp/package/rakuraku_wf2/"><img src="images/case_list_img07.png" alt="winactor"></a></li>
-									<li class="cont_case_txt_link_other"><a href="https://www.miraitsystems.jp/package/rakuraku_wf2/">その他</a></li>
-								</ul>
+							<div class="cont_case_txt">
+								<div class="cont_case_txt_top">
+									<a href="https://www.miraitsystems.jp/package/index.html">
+										<p><span>フレームワークや自動化ツールを</span><br><span>用いた業務システム開発</span></p>
+									</a>
+								</div>
+								<div class="cont_case_txt_link">
+									<ul>
+										<li><a href="https://www.miraitsystems.jp/package/rakuraku_fw2/"><img src="images/case_list_img06_2x.png" alt="winactor"></a></li>
+										<li><a href="https://www.miraitsystems.jp/package/rakuraku_wf2/"><img src="images/case_list_img07_2x.png" alt="winactor"></a></li>
+										<li class="cont_case_txt_link_other"><a href="https://www.miraitsystems.jp/package/rakuraku_wf2/">その他</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="cont_case_item">
-						<div class="cont_case_img cont_case-03"><a href="https://www.miraitsystems.jp/cloud/index.html"><img src="images/case_img03.png" alt="クラウド構築・運用運用"></a></div>
-						<div class="cont_case_txt">
-							<div class="cont_case_txt_top">
+						<div class="cont_case_item">
+							<div class="cont_case_img cont_case-03">
 								<a href="https://www.miraitsystems.jp/cloud/index.html">
-									<p>堅牢かつ柔軟な</p>
-									<p>IT基盤をトータル支援<span>→</span></p>
+									<picture>
+										<source media="(max-width: 991px)" srcset="images/case_img03_sp_2x.jpg">
+										<source media="(min-width: 992px)" srcset="images/case_img03_2x.png">
+										<img src="images/case_img03_2x.png" alt="クラウド構築・運用運用">
+									</picture>
+									<span>クラウド構築・運用</span>
 								</a>
 							</div>
-							<div class="cont_case_txt_link">
-								<ul>
-									<li><a href="https://www.miraitsystems.jp/ibm/softlayer/index.html"><img src="images/case_list_img04.png" alt="　MIRACLE（IBM Cloud)　クラウド総合支援サービス"></a></li>
-								</ul>
+							<div class="cont_case_txt">
+								<div class="cont_case_txt_top">
+									<a href="https://www.miraitsystems.jp/cloud/index.html">
+										<p><span>堅牢かつ柔軟な</span><br><span>IT基盤をトータル支援</span></p>
+									</a>
+								</div>
+								<div class="cont_case_txt_link">
+									<ul>
+										<li><a href="https://www.miraitsystems.jp/ibm/softlayer/index.html"><img src="images/case_list_img04_2x.png" alt="　MIRACLE（IBM Cloud)　クラウド総合支援サービス"></a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="cont_case_item">
-						<div class="cont_case_img cont_case-02"><a href="https://www.miraitsystems.jp/solution/index.html#smartdevice"><img src="images/case_img02.png" alt="スマートデバイスソリューション"></a></div>
-						<div class="cont_case_txt">
-							<div class="cont_case_txt_top">
+						<div class="cont_case_item">
+							<div class="cont_case_img cont_case-02">
 								<a href="https://www.miraitsystems.jp/solution/index.html#smartdevice">
-									<p>オフィスの外の業務も</p>
-									<p>IT化、効率化<span>→</span></p>
+									<picture>
+										<source media="(max-width: 991px)" srcset="images/case_img02_sp_2x.jpg">
+										<source media="(min-width: 992px)" srcset="images/case_img02_2x.png">
+										<img src="images/case_img02_2x.png" alt="スマートデバイスソリューション">
+									</picture>
+									<span>スマートデバイス<br>ソリューション</span>
 								</a>
 							</div>
-							<div class="cont_case_txt_link">
-								<ul>
-									<li><a href="https://www.miraitsystems.jp/solution/imagegate/"><img src="images/case_list_img02.png" alt="ImageGate"></a></li>
-									<li><a href="https://www.miraitsystems.jp/smartphone/smart_plus/index.html"><img src="images/case_list_img03.png" alt="　SmartPlus"></a></li>
-									<li class="cont_case_txt_link_other"><a href="">その他</a></li>
-								</ul>
+							<div class="cont_case_txt">
+								<div class="cont_case_txt_top">
+									<a href="https://www.miraitsystems.jp/solution/index.html#smartdevice">
+										<p><span>オフィスの外の業務も</span><br><span>IT化、効率化</span></p>
+									</a>
+								</div>
+								<div class="cont_case_txt_link">
+									<ul>
+										<li><a href="https://www.miraitsystems.jp/solution/imagegate/"><img src="images/case_list_img02_2x.png" alt="ImageGate"></a></li>
+										<li><a href="https://www.miraitsystems.jp/smartphone/smart_plus/index.html"><img src="images/case_list_img03_2x.png" alt="　SmartPlus"></a></li>
+										<li class="cont_case_txt_link_other"><a href="">その他</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="cont_case_item">
-						<div class="cont_case_img cont_case-01"><a href="https://www.miraitsystems.jp/solution/index.html"><img src="images/case_img01.png" alt="RPAソリューション"></a></div>
-						<div class="cont_case_txt">
-							<div class="cont_case_txt_top">
+						<div class="cont_case_item">
+							<div class="cont_case_img cont_case-01">
 								<a href="https://www.miraitsystems.jp/solution/index.html">
-									<p>定型業務をロボットで自動化。</p>
-									<p>働き方改革の実現に<span>→</span></p>
+									<picture>
+										<source media="(max-width: 991px)" srcset="images/case_img01_sp_2x.jpg">
+										<source media="(min-width: 992px)" srcset="images/case_img01_2x.png">
+										<img src="images/case_img01_2x.png" alt="RPAソリューション">
+									</picture>
+									<span>RPAソリューション</span>
 								</a>
 							</div>
-							<div class="cont_case_txt_link">
-								<ul>
-									<li><a href="https://www.miraitsystems.jp/solution/winactor/index.html"><img src="images/case_list_img01.png" alt="winactor"></a></li>
-								</ul>
+							<div class="cont_case_txt">
+								<div class="cont_case_txt_top">
+									<a href="https://www.miraitsystems.jp/solution/index.html">
+										<p><span>定型業務をロボットで自動化。</span><br><span>働き方改革の実現に</span></p>
+									</a>
+								</div>
+								<div class="cont_case_txt_link">
+									<ul>
+										<li><a href="https://www.miraitsystems.jp/solution/winactor/index.html"><img src="images/case_list_img01_2x.png" alt="winactor"></a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>

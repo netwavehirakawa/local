@@ -11,6 +11,9 @@ $(function(){
 			delay: 5000,
 		},
 		on: {
+			init: function(){
+				$('.main_visual').addClass('slider_on_init');
+			},
 			slideChangeTransitionStart: function(){
 				var idx = this.realIndex;
 				var className;

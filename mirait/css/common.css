@@ -14,3 +14,12 @@ a:hover {
 	color: #919191;
 	text-decoration: none;
 }
+
+img {
+	max-width: 100%;
+	vertical-align: top;
+}
+
+picture {
+	display: block;
+}
